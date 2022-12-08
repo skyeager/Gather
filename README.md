@@ -60,7 +60,7 @@
 
 <figcaption>Entity Relationship Diagram</figcaption>
 
-![Screen Shot 2022-12-07 at 4 42 28 PM](https://user-images.githubusercontent.com/95553482/206470947-f6163327-16ac-4eba-beac-a530afc3fcf7.png)
+![Screen Shot 2022-12-07 at 4 42 28 PM](https://user-images.githubusercontent.com/95553482/206484317-557410c6-61e4-4e16-bf1f-91b9a144281b.png)
 
 <figcaption>Component Hierarchy Diagram</figcaption>
 
