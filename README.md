@@ -1,6 +1,6 @@
 # Gather
 
-## Date: 11/15/2022
+## Date: 12/15/2022
 
 ### By: Sarah Yeager
 
@@ -53,6 +53,10 @@
 <figcaption> Gather Inspiration</figcaption>
 
 ![Community Board Inspiration](https://user-images.githubusercontent.com/95553482/206301240-b0c6dda9-598d-457a-9b3f-70c07ed98b98.png)
+
+<figcaption>Trello Board</figcaption>
+
+![Trello Screen Shot](https://user-images.githubusercontent.com/95553482/206435504-2ea06fc0-b121-400e-87ba-55459584883c.png)
 
 <figcaption>Entity Relationship Diagram</figcaption>
 
