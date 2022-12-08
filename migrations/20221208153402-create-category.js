@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       events: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       eventId: {
         type: Sequelize.INTEGER

@@ -15,8 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
-      events: DataTypes.ARRAY,
-      eventId: DataTypes.INTEGER
+      events: DataTypes.ARRAY(DataTypes.STRING)
     },
     {
       sequelize,

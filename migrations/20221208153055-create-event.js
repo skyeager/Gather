@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       attending: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       categoryId: {
         type: Sequelize.INTEGER,
