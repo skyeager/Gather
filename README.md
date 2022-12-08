@@ -60,11 +60,11 @@
 
 <figcaption>Entity Relationship Diagram</figcaption>
 
-![Screen Shot 2022-12-07 at 4 42 28 PM](https://user-images.githubusercontent.com/95553482/206484317-557410c6-61e4-4e16-bf1f-91b9a144281b.png)
+![Screen Shot 2022-12-07 at 4 42 28 PM](https://user-images.githubusercontent.com/95553482/206580968-00b81e64-7a38-4c8c-8899-bb54f0bfde9b.png)
 
 <figcaption>Component Hierarchy Diagram</figcaption>
 
-![Screen Shot 2022-12-07 at 4 43 30 PM](https://user-images.githubusercontent.com/95553482/206471097-453c4d0e-976c-4f0c-a55a-ae552b880d14.png)
+![Screen Shot 2022-12-07 at 4 43 30 PM](https://user-images.githubusercontent.com/95553482/206581126-d0e75c09-b91a-4b55-ba75-0d1107179458.png)
 
 <figcaption> PERN Tech Stack</figcaption>
 
