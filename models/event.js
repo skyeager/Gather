@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Event.belongsTo(models.Category, { foreignKey: 'categoryId' })
     }
   }
   Event.init(
@@ -18,7 +18,14 @@ module.exports = (sequelize, DataTypes) => {
       date: DataTypes.INTEGER,
       attending: DataTypes.ARRAY,
       userId: DataTypes.INTEGER,
-      categoryId: DataTypes.INTEGER
+      categoryId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'categories',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
