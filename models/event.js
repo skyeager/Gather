@@ -16,8 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       description: DataTypes.STRING,
       date: DataTypes.INTEGER,
-      attending: DataTypes.ARRAY,
-      userId: DataTypes.INTEGER,
+      attending: DataTypes.ARRAY(DataTypes.STRING),
       categoryId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',

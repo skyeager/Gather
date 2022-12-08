@@ -21,9 +21,6 @@ module.exports = {
       goingTo: {
         type: Sequelize.STRING
       },
-      eventId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
