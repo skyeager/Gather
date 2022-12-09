@@ -1,7 +1,8 @@
-const { Category } = require('../models')
+const { User, Event } = require('../models')
 
 const GetUserEvents = async (req, res) => {
   try {
+    const userEvents = await res.send(userEvents)
   } catch (error) {
     throw error
   }
@@ -9,6 +10,15 @@ const GetUserEvents = async (req, res) => {
 
 const GetAttendees = async (req, res) => {
   try {
+    const attendees = await Event.findAll({
+      include: [
+        {
+          model: User,
+          as: 'attendee',
+          attributes: ['id', 'username']
+        }
+      ]
+    })
   } catch (error) {
     throw error
   }
