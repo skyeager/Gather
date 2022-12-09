@@ -6,7 +6,7 @@ const GetUserEventList = async (req, res) => {
       include: [
         {
           model: Event,
-          as: ''
+          as: 'user_event_list'
         }
       ]
     })
