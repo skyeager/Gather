@@ -15,10 +15,11 @@ const GetAttendees = async (req, res) => {
         {
           model: User,
           as: 'attendee',
-          attributes: ['id', 'username']
+          attributes: ['id', 'userName']
         }
       ]
     })
+    res.send(attendees)
   } catch (error) {
     throw error
   }
