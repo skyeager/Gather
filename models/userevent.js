@@ -13,7 +13,23 @@ module.exports = (sequelize, DataTypes) => {
   }
   UserEvent.init(
     {
-      name: DataTypes.STRING
+      name: DataTypes.STRING,
+      userId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        model: 'users',
+        references: {
+          key: 'id'
+        }
+      },
+      eventId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'events',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,

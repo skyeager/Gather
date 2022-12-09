@@ -21,13 +21,14 @@ module.exports = {
       attending: {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      categoryId: {
-        type: Sequelize.INTEGER
-        // onDelete: 'CASCADE',
-        // references: {
-        //   model: 'categories',
-        //   key: 'id'
-        // }
+      category_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'categories',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
