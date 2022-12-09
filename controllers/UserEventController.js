@@ -1,6 +1,6 @@
 const { User, Event } = require('../models')
 
-const GetUserEvents = async (req, res) => {
+const GetUserEventList = async (req, res) => {
   try {
     const userEvents = await res.send(userEvents)
   } catch (error) {
@@ -26,6 +26,6 @@ const GetAttendees = async (req, res) => {
 }
 
 module.exports = {
-  GetUserEvents,
+  GetUserEventList,
   GetAttendees
 }
