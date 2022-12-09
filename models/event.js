@@ -2,13 +2,8 @@
 const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
-      Event.belongsTo(models.Category, { foreignKey: 'categoryId' })
+      // Event.belongsTo(models.Category, { foreignKey: 'categoryId' })
     }
   }
   Event.init(
@@ -17,14 +12,15 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       date: DataTypes.INTEGER,
       attending: DataTypes.ARRAY(DataTypes.STRING),
-      categoryId: {
-        type: DataTypes.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'categories',
-          key: 'id'
-        }
-      }
+      categoryId: DataTypes.INTEGER
+      // categoryId: {
+      //   type: DataTypes.INTEGER,
+      //   onDelete: 'CASCADE',
+      //   references: {
+      //     model: 'categories',
+      //     key: 'id'
+      //   }
+      // }
     },
     {
       sequelize,

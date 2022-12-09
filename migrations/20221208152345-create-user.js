@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       goingTo: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,
