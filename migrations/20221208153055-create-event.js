@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       date: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       attending: {
         type: Sequelize.ARRAY(Sequelize.STRING)
