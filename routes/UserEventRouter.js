@@ -4,6 +4,6 @@ const controller = require('../controllers/UserEventController')
 
 
 router.get('/', controller.)
-router.get('/', controller.)
+router.get('/attendees', controller.GetAttendees)
 
 module.exports = router
