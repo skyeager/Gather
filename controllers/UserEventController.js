@@ -2,15 +2,15 @@ const { User, Event } = require('../models')
 
 const GetUserEventList = async (req, res) => {
   try {
-    const userEventList = await User.findByPk(req.params.user_id, {
+    const userAndList = await User.findByPk(req.params.user_id, {
       include: [
         {
           model: Event,
-          as: 'user_event_list'
+          as: 'attendee'
         }
       ]
     })
-    res.send(userEventList)
+    res.send(userAndList)
   } catch (error) {
     throw error
   }
@@ -18,16 +18,15 @@ const GetUserEventList = async (req, res) => {
 
 const GetAttendees = async (req, res) => {
   try {
-    const attendees = await Event.findByPk(req.params.event_id, {
+    const eventAndAttendees = await Event.findByPk(req.params.event_id, {
       include: [
         {
           model: User,
-          as: 'attendee',
-          attributes: ['id', 'userName']
+          as: 'user_event_list'
         }
       ]
     })
-    res.send(attendees)
+    res.send(eventAndAttendees)
   } catch (error) {
     throw error
   }
