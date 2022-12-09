@@ -8,8 +8,9 @@ module.exports = {
       [
         {
           name: 'Yoga in the park',
-          description: '',
-          date: '',
+          description:
+            'Free yoga in the park this weekend! Enjoy a gentle yoga class on the waterfront.',
+          date: '052022',
           attending: ['BurlingtonAdventurer', 'MusicLover', 'VermontFoodie'],
           category_id: 1,
           createdAt: new Date(),
