@@ -6,6 +6,7 @@ import SignIn from './pages/SignIn'
 import Home from './pages/Home'
 import { CheckSession } from './services/Auth'
 import './styles/App.css'
+import Feed from './pages/Feed'
 // import CreateEvent from './pages/CreateEvent'
 // import UpdateEvent from './pages/UpdateEvent'
 
