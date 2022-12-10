@@ -1,12 +1,11 @@
 import { useNavigate } from 'react-router-dom'
-import Welcome from '../assets/welcome.svg'
 
 const Home = () => {
   let navigate = useNavigate()
 
   return (
     <div className="home-container col">
-      <img src={Welcome} alt="welcome" />
+      <h4>Welcome!</h4>
 
       <section className="welcome-signin">
         <button onClick={() => navigate('/signin')}>
