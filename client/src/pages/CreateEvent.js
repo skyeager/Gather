@@ -59,7 +59,26 @@ const CreateEvent = () => {
           rows="10"
           value={formState.description}
         ></textarea>
-
+        <label htmlFor="date">Date: </label>
+        <input
+          className="form-box"
+          onChange={handleChange}
+          type="text"
+          id="date"
+          value={formState.date}
+        />
+        <select
+          className="form-box"
+          onChange={handleChange}
+          value={formState.category_id}
+          id="category_id"
+        >
+          <option>Event Category</option>
+          {/* will hopefully not need this drop down, will automatically go! */}
+          <option value={1}>Movement</option>
+          <option value={2}>Music</option>
+          <option value={3}>Food</option>
+        </select>
         <button type="submit">Create My Event</button>
       </form>
     </div>
