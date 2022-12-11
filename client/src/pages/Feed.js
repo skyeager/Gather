@@ -1,30 +1,34 @@
 import { useEffect, useState } from 'react'
-import { GetPosts } from '../services/PostServices'
+import { GetCategories } from '../services/CategoryServices'
 import { useNavigate } from 'react-router-dom'
 
 const Feed = ({ user }) => {
-  const [posts, setPosts] = useState([])
+  const [categories, setCategories] = useState([])
   let navigate = useNavigate()
 
   useEffect(() => {
-    const handlePosts = async () => {
-      const data = await GetPosts()
-      setPosts(data)
+    const handleCategories = async () => {
+      const data = await GetCategories()
+      setCategories(data)
     }
-    handlePosts()
+    handleCategories()
   }, [])
 
   return user ? (
     <div className="grid col-4">
-      {posts.map((post) => (
+      {categories.map((category) => (
+        <div className="category-card" key={category.id}>
+          <h1>{category.name}</h1>
+          <h4>{category.description}</h4>
+        </div>
+      ))}
+      {/* {posts.map((post) => (
         <div className="card" key={post.id}>
           <h3>{post.title}</h3>
           <div>
             <img src={post.image} alt="post" />
           </div>
-          <p>{post.body.substring(0, 80)}...</p>
-        </div>
-      ))}
+          <p>{post.body.substring(0, 80)}...</p> */}
     </div>
   ) : (
     <div className="protected">
