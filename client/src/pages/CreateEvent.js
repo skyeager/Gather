@@ -1,21 +1,9 @@
 import Client from '../services/api'
-import { useState } from 'react'
 import { BASE_URL } from '../services/api'
 import { useNavigate } from 'react-router-dom'
-// import { useNavigate } from "react-router-dom"
 
-const CreateEvent = () => {
-  // let navigate=useNavigate()
-
-  const initialState = {
-    event_id: '',
-    name: '',
-    description: '',
-    date: '',
-    category_id: ''
-  }
-
-  const [formState, setFormState] = useState()
+const CreateEvent = ({ user, initialState, formState, setFormState }) => {
+  let navigate = useNavigate()
 
   const handleChange = (event) => {
     setFormState({

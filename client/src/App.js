@@ -14,6 +14,14 @@ import CategoryList from './pages/CategoryList'
 const App = () => {
   const [user, setUser] = useState(null)
 
+  const initialState = {
+    event_id: '',
+    name: '',
+    description: '',
+    date: '',
+    category_id: ''
+  }
+
   const checkToken = async () => {
     const user = await CheckSession()
     setUser(user)
@@ -41,7 +49,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
           <Route path="/categorylist/:id" element={<CategoryList />} />
-          {/* <Route
+          <Route
             path="/"
             element={
               <CreateEvent
@@ -51,8 +59,8 @@ const App = () => {
                 setFormState={setFormState}
               />
             }
-          /> */}
-          {/* <Route
+          />
+          <Route
             path=""
             element={
               <UpdateEvent
@@ -62,7 +70,7 @@ const App = () => {
                 initialState={initialState}
               />
             }
-          /> */}
+          />
         </Routes>
       </main>
     </div>
