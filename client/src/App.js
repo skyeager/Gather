@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import { CheckSession } from './services/Auth'
 import './App.css'
 import Feed from './pages/Feed'
+import CategoryList from './pages/CategoryList'
 // import CreateEvent from './pages/CreateEvent'
 // import UpdateEvent from './pages/UpdateEvent'
 
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
+          <Route path="/categorylist/:id" element={<CategoryList />} />
           {/* <Route
             path="/"
             element={

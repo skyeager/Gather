@@ -15,11 +15,17 @@ const Feed = ({ user }) => {
   }, [])
 
   return user ? (
-    <div className="grid col-4">
+    <div className="grid-col-4">
       {categories.map((category) => (
         <div className="category-card" key={category.id}>
           <h1>{category.name}</h1>
           <h4>{category.description}</h4>
+          <button
+            className="events-button"
+            onClick={(id) => navigate(`/categorylist/${id}`)}
+          >
+            Events
+          </button>
         </div>
       ))}
       {/* {posts.map((post) => (

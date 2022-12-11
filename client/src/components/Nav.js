@@ -4,22 +4,26 @@ const Nav = ({ user, handleLogOut }) => {
   let authenticatedOptions
   if (user) {
     authenticatedOptions = (
-      <nav>
-        <h3>Welcome {user.email}!</h3>
-        <Link to="/feed">Feed</Link>
-        <Link onClick={handleLogOut} to="/">
-          Sign Out
-        </Link>
-      </nav>
+      <div className="Nav">
+        <nav>
+          <h1>Gather</h1>
+          <Link to="/feed">Feed</Link>
+          <Link onClick={handleLogOut} to="/">
+            Sign Out
+          </Link>
+        </nav>
+      </div>
     )
   }
 
   const publicOptions = (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/signin">Sign In</Link>
-    </nav>
+    <div className="Nav">
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/register">Register</Link>
+        <Link to="/signin">Sign In</Link>
+      </nav>
+    </div>
   )
 
   return (
