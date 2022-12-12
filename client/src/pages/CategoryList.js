@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GetCategoryList } from '../services/CategoryServices'
 import { useParams } from 'react-router-dom'
+import Client from '../services/api'
 
 const CategoryList = ({ user }) => {
   const [categoryList, setCategoryList] = useState([])
@@ -16,6 +17,11 @@ const CategoryList = ({ user }) => {
     handleCategoryList()
   }, [])
 
+  deleteEvent = async (e) => {
+    const res = await Client.delete(`/event/delete/${e.target.id}`)
+    // something here to re-render page again
+  }
+
   return (
     <div className="grid col-4">
       {categoryList?.map((catEvent) => (
@@ -26,11 +32,11 @@ const CategoryList = ({ user }) => {
           <h4>People Attending: {catEvent.attending.length}</h4>
           <div>
             user ? (
-            <button onClick={() => navigate(`/categorylist/${category.id}`)}>
+            <button onClick={() => navigate(`/update/event/${id}`)}>
               {' '}
               Update:{' '}
             </button>
-            <button> Delete: </button>
+            <button onClick={deleteEvent}> Delete: </button>
             ):()
           </div>
         </div>
