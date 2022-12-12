@@ -9,11 +9,11 @@ export const GetCategories = async () => {
   }
 }
 
-export const GetCategoryList = async () => {
+export const GetCategoryList = async (id) => {
+  console.log('getting category')
   try {
-    const res = await Client.get('/event/categorylist/:category_id')
-    console.log(res.data)
-    return res.data
+    const res = await Client.get(`/event/categorylist/${id}`)
+    return res.data.Events
   } catch (error) {
     throw error
   }

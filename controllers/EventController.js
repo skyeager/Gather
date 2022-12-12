@@ -19,11 +19,14 @@ const GetEvent = async (req, res) => {
 // }
 
 const CategoryListOfEvents = async (req, res) => {
-  const categorizedEvents = await Category.findByPk(req.params.category_id, {
-    include: Event
-  })
-  res.send(categorizedEvents)
   try {
+    const categorizedEvents = await Category.findByPk(
+      parseInt(req.params.category_id),
+      {
+        include: Event
+      }
+    )
+    res.send(categorizedEvents)
   } catch (error) {
     throw error
   }

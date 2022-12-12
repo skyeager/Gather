@@ -1,13 +1,13 @@
 const { Post } = require('../models')
 
-const GetPosts = async (req, res) => {
-  try {
-    const posts = await Post.findAll()
-    res.send(posts)
-  } catch (error) {
-    throw error
-  }
-}
+// const GetPosts = async (req, res) => {
+//   try {
+//     const posts = await Post.findAll()
+//     res.send(posts)
+//   } catch (error) {
+//     throw error
+//   }
+// }
 
 const CreatePost = async (req, res) => {
   try {
@@ -40,7 +40,7 @@ const DeletePost = async (req, res) => {
 }
 
 module.exports = {
-  GetPosts,
+  // GetPosts,
   CreatePost,
   UpdatePost,
   DeletePost

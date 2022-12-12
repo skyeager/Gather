@@ -49,7 +49,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
           <Route path="/categorylist/:id" element={<CategoryList />} />
-          <Route
+          {/* <Route
             path="/"
             element={
               <CreateEvent
@@ -57,9 +57,8 @@ const App = () => {
                 initialState={initialState}
                 formState={formState}
                 setFormState={setFormState}
-              />
-            }
-          />
+              /> */}
+          {/* } />
           <Route
             path=""
             element={
@@ -69,8 +68,8 @@ const App = () => {
                 setFormState={setFormState}
                 initialState={initialState}
               />
-            }
-          />
+            } */}
+          {/* /> */}
         </Routes>
       </main>
     </div>

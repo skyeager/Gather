@@ -10,6 +10,7 @@ const Feed = ({ user }) => {
     const handleCategories = async () => {
       const data = await GetCategories()
       setCategories(data)
+      console.log(data)
     }
     handleCategories()
   }, [])
@@ -22,7 +23,7 @@ const Feed = ({ user }) => {
           <h4>{category.description}</h4>
           <button
             className="events-button"
-            onClick={(id) => navigate(`/categorylist/${id}`)}
+            onClick={() => navigate(`/categorylist/${category.id}`)}
           >
             Events
           </button>
