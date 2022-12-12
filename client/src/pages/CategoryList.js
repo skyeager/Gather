@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { GetCategoryList } from '../services/CategoryServices'
 import { useParams } from 'react-router-dom'
 
-const CategoryList = () => {
+const CategoryList = ({ user }) => {
   const [categoryList, setCategoryList] = useState([])
 
   let { id } = useParams()
@@ -24,7 +24,15 @@ const CategoryList = () => {
           <h4>{catEvent.description}</h4>
           <h2>{catEvent.date}</h2>
           <h4>People Attending: {catEvent.attending.length}</h4>
-          ///if user ? show update or delete buttons
+          <div>
+            user ? (
+            <button onClick={() => navigate(`/categorylist/${category.id}`)}>
+              {' '}
+              Update:{' '}
+            </button>
+            <button> Delete: </button>
+            ):()
+          </div>
         </div>
       ))}
     </div>

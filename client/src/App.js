@@ -8,6 +8,7 @@ import { CheckSession } from './services/Auth'
 import './App.css'
 import Feed from './pages/Feed'
 import CategoryList from './pages/CategoryList'
+import { UpdateEvent } from '../../controllers/EventController'
 // import CreateEvent from './pages/CreateEvent'
 // import UpdateEvent from './pages/UpdateEvent'
 
@@ -48,19 +49,23 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/feed" element={<Feed user={user} />} />
-          <Route path="/categorylist/:id" element={<CategoryList />} />
-          {/* <Route
-            path="/"
+          <Route
+            path="/categorylist/:id"
+            element={<CategoryList user={user} />}
+          />
+          <Route
+            path="/create/event"
             element={
               <CreateEvent
                 user={user}
-                initialState={initialState}
                 formState={formState}
                 setFormState={setFormState}
-              /> */}
-          {/* } />
+                initialState={initialState}
+              />
+            }
+          />
           <Route
-            path=""
+            path="/update/event/:id"
             element={
               <UpdateEvent
                 user={user}
@@ -68,8 +73,8 @@ const App = () => {
                 setFormState={setFormState}
                 initialState={initialState}
               />
-            } */}
-          {/* /> */}
+            }
+          />
         </Routes>
       </main>
     </div>
