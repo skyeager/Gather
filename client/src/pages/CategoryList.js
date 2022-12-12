@@ -19,7 +19,7 @@ const CategoryList = ({ user }) => {
 
   deleteEvent = async (e) => {
     const res = await Client.delete(`/event/delete/${e.target.id}`)
-    // something here to re-render page again
+    navigate(`/categorylist/${category.id}`)
   }
 
   return (
