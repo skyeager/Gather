@@ -21,7 +21,7 @@ module.exports = {
       attending: {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      category_id: {
+      categoryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',

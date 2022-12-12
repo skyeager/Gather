@@ -10,7 +10,6 @@ module.exports = {
           name: 'Movement',
           description:
             'Here you will find all events that are movement based--from yoga to pick up rugby to dance classes, and more!',
-          events: ['Yoga in the park', 'Pick up basketball'],
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -18,7 +17,6 @@ module.exports = {
           name: 'Music',
           description:
             'Learn about the best music venues in town! Find out where your favorite band is playing or learn about an open mic night! The world is your musical oyster.',
-          events: ['Jazz Festival'],
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -26,7 +24,6 @@ module.exports = {
           name: 'Food',
           description:
             'Burlington loves food and you do too! Find out about the the hippest and tastiest cuisine around.',
-          events: ['Five dollar burger night'],
           createdAt: new Date(),
           updatedAt: new Date()
         }

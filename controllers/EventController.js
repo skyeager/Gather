@@ -9,21 +9,21 @@ const GetEvent = async (req, res) => {
   }
 }
 
-// const GetAllEvents = async (req, res) => {
-//   try {
-//     const event = await Event.findAll()
-//     res.send(event)
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const GetAllEvents = async (req, res) => {
+  try {
+    const events = await Event.findAll()
+    res.send(events)
+  } catch (error) {
+    throw error
+  }
+}
 
 const CategoryListOfEvents = async (req, res) => {
   try {
     const categorizedEvents = await Category.findByPk(
       parseInt(req.params.category_id),
       {
-        include: Event
+        include: { model: Event, as: 'events' }
       }
     )
     res.send(categorizedEvents)
@@ -72,7 +72,7 @@ const DeleteEvent = async (req, res) => {
 
 module.exports = {
   GetEvent,
-  // GetAllEvents,
+  GetAllEvents,
   CategoryListOfEvents,
   CreateEvent,
   UpdateEvent,

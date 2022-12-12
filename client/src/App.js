@@ -8,12 +8,12 @@ import { CheckSession } from './services/Auth'
 import './App.css'
 import Feed from './pages/Feed'
 import CategoryList from './pages/CategoryList'
-import { UpdateEvent } from '../../controllers/EventController'
-// import CreateEvent from './pages/CreateEvent'
-// import UpdateEvent from './pages/UpdateEvent'
+import CreateEvent from './pages/CreateEvent'
+import UpdateEvent from './pages/UpdateEvent'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [categoryList, setCategoryList] = useState([])
 
   const initialState = {
     event_id: '',
@@ -22,6 +22,8 @@ const App = () => {
     date: '',
     category_id: ''
   }
+
+  const [formState, setFormState] = useState(initialState)
 
   const checkToken = async () => {
     const user = await CheckSession()
@@ -51,9 +53,15 @@ const App = () => {
           <Route path="/feed" element={<Feed user={user} />} />
           <Route
             path="/categorylist/:id"
-            element={<CategoryList user={user} />}
+            element={
+              <CategoryList
+                user={user}
+                categoryList={categoryList}
+                setCategoryList={setCategoryList}
+              />
+            }
           />
-          <Route
+          {/* <Route
             path="/create/event"
             element={
               <CreateEvent
@@ -63,15 +71,17 @@ const App = () => {
                 initialState={initialState}
               />
             }
-          />
+          /> */}
           <Route
-            path="/update/event/:id"
+            path="/update/event/:id/:index"
             element={
               <UpdateEvent
                 user={user}
                 formState={formState}
                 setFormState={setFormState}
                 initialState={initialState}
+                categoryList={categoryList}
+                setCategoryList={setCategoryList}
               />
             }
           />

@@ -12,7 +12,8 @@ export const GetCategories = async () => {
 export const GetCategoryList = async (id) => {
   try {
     const res = await Client.get(`/event/categorylist/${id}`)
-    return res.data.Events
+    console.log(res.data)
+    return res.data.events
   } catch (error) {
     throw error
   }

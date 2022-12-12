@@ -2,8 +2,8 @@ const router = require('express').Router()
 const controller = require('../controllers/EventController')
 const middleware = require('../middleware')
 
+router.get('/everyevent', controller.GetAllEvents)
 router.get('/:event_id', controller.GetEvent)
-// router.get('/everyevent', controller.GetAllEvents)
 router.get('/categorylist/:category_id', controller.CategoryListOfEvents)
 
 router.post(

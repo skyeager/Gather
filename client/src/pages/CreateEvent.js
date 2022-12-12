@@ -17,19 +17,14 @@
 //     const eventAdded = {
 //       ...formState
 //     }
-//     let res = await Client.post(
-//       `${BASE_URL}/event/create${user.id}`,
-//       eventAdded
-//     )
+//     let res = await Client.post(`/event/create${user.id}`, eventAdded)
 //     setFormState(initialState)
 //   }
 
 //   return (
 //     <div>
 //       <h1>Post an Event</h1>
-//       ******************
 //       {/* add something to input event category into this h1 (i.e. post a music event!) */}
-//       ******************
 //       <form onSubmit={handleSubmit}>
 //         <label htmlFor="name">Name of Event: </label>
 //         <input
@@ -64,9 +59,7 @@
 //           id="category_id"
 //         >
 //           <option>Event Category</option>
-//           ******************
 //           {/* will hopefully not need this drop down, will automatically go! */}
-//           ******************
 //           <option value={1}>Movement</option>
 //           <option value={2}>Music</option>
 //           <option value={3}>Food</option>

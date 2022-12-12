@@ -3,7 +3,10 @@ const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
     static associate(models) {
-      Event.belongsTo(models.Category, { foreignKey: 'category_id' })
+      Event.belongsTo(models.Category, {
+        foreignKey: 'categoryId',
+        as: 'events'
+      })
       Event.belongsToMany(models.User, {
         as: 'user_event_list',
         through: models.UserEvent,
@@ -17,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.STRING,
       date: DataTypes.STRING,
       attending: DataTypes.ARRAY(DataTypes.STRING),
-      category_id: {
+      categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',

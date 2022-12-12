@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { GetCategoryList } from '../services/CategoryServices'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 
-const CategoryList = ({ user }) => {
-  const [categoryList, setCategoryList] = useState([])
+const CategoryList = ({ use, categoryList, setCategoryList }) => {
+  let navigate = useNavigate()
 
   let { id } = useParams()
 
@@ -17,27 +17,26 @@ const CategoryList = ({ user }) => {
     handleCategoryList()
   }, [])
 
-  deleteEvent = async (e) => {
+  const deleteEvent = async (e) => {
     const res = await Client.delete(`/event/delete/${e.target.id}`)
-    navigate(`/categorylist/${category.id}`)
+    navigate(`/categorylist/${id}`)
   }
 
   return (
     <div className="grid col-4">
-      {categoryList?.map((catEvent) => (
+      {categoryList?.map((catEvent, index) => (
         <div className="category-card" key={catEvent.id}>
           <h1>{catEvent.name}</h1>
           <h4>{catEvent.description}</h4>
           <h2>{catEvent.date}</h2>
           <h4>People Attending: {catEvent.attending.length}</h4>
           <div>
-            user ? (
-            <button onClick={() => navigate(`/update/event/${id}`)}>
-              {' '}
-              Update:{' '}
+            return (user ? (
+            <button onClick={() => navigate(`/update/event/${id}/${index}`)}>
+              Update
             </button>
-            <button onClick={deleteEvent}> Delete: </button>
-            ):()
+            <button onClick={deleteEvent}> Delete </button>
+            ):() )
           </div>
         </div>
       ))}
