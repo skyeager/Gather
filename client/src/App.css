@@ -30,8 +30,8 @@
 }
 
 .category-card{
-  border: 6px solid rgb(184, 176, 176);
-  border-radius: 15px;
+  /* border: 6px solid rgb(184, 176, 176); */
+  border-radius: 5px;
   box-shadow:0 8px 14px 0 black;
   margin: 50px;
   background-color: #9db4c0;
@@ -63,7 +63,6 @@
 }
 
 .create-event-form{
-  border-radius: 15px;
   margin: 5px;
   font-family: 'Roboto';
   font-size: 16px;
@@ -85,3 +84,9 @@
 #description{
   height: 150px;
 }
+
+/* .index-body{
+  background-image: ("david-dvoracek-3kBIZZluhNc-unsplash.jpg") ;
+}
+
+david-dvoracek-3kBIZZluhNc-unsplash.jpg */

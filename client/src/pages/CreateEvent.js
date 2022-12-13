@@ -1,10 +1,13 @@
 import Client from '../services/api'
-import { useNavigate, useParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
-const CreateEvent = ({ user, formState, setFormState, initialState }) => {
-  let navigate = useNavigate()
-
+const CreateEvent = ({
+  formState,
+  setFormState,
+  initialState,
+  categoryList,
+  setCategoryList
+}) => {
   let { id } = useParams()
 
   const handleChange = (event) => {
@@ -14,16 +17,17 @@ const CreateEvent = ({ user, formState, setFormState, initialState }) => {
     })
   }
 
-  console.log(formState)
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     const eventAdded = {
       ...formState
     }
-    let res = await Client.post(`/event/create/${id}`, eventAdded)
+    await Client.post(`/event/create/${id}`, eventAdded)
+    let newList = [...categoryList]
+    newList.push(eventAdded)
+    console.log(newList)
+    setCategoryList(newList)
     setFormState(initialState)
-    navigate(`/categorylist/${id}`)
   }
 
   return (

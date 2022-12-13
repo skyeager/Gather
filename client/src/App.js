@@ -72,7 +72,8 @@ const App = () => {
                 formState={formState}
                 setFormState={setFormState}
                 initialState={initialState}
-                // categories={categories}
+                categoryList={categoryList}
+                setCategoryList={setCategoryList}
               />
             }
           />

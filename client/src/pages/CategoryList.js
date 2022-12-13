@@ -25,9 +25,12 @@ const CategoryList = ({
     handleCategoryList()
   }, [])
 
-  const deleteEvent = async (e) => {
-    const res = await Client.delete(`/event/delete/${e.target.id}`)
-    navigate(`/categorylist/${id}`)
+  const deleteEvent = async (eventId, index) => {
+    console.log(eventId)
+    await Client.delete(`/event/delete/${eventId}`)
+    let newList = [...categoryList]
+    newList.splice(index, 1)
+    setCategoryList(newList)
   }
 
   return (
@@ -44,7 +47,10 @@ const CategoryList = ({
             <button onClick={() => navigate(`/event/update/${id}/${index}`)}>
               Update
             </button>
-            <button onClick={deleteEvent}> Delete </button>
+            <button onClick={() => deleteEvent(catEvent.id, index)}>
+              {' '}
+              Delete{' '}
+            </button>
           </div>
         </div>
       ))}
@@ -53,6 +59,8 @@ const CategoryList = ({
         formState={formState}
         initialState={initialState}
         user={user}
+        categoryList={categoryList}
+        setCategoryList={setCategoryList}
       />
     </div>
   )
