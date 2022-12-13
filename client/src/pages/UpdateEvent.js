@@ -47,7 +47,6 @@ const UpdateEvent = ({
   return (
     <div>
       <h1>Update an Event</h1>
-      {/* add something to input event category into this h1 (i.e. post a music event!) */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Event: </label>
         <input

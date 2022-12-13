@@ -1,5 +1,5 @@
 import Client from '../services/api'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const CreateEvent = ({
   formState,
@@ -9,6 +9,9 @@ const CreateEvent = ({
   setCategoryList
 }) => {
   let { id } = useParams()
+  let navigate = useNavigate()
+
+  let categoryId = formState.categoryId
 
   const handleChange = (event) => {
     setFormState({
@@ -28,6 +31,7 @@ const CreateEvent = ({
     console.log(newList)
     setCategoryList(newList)
     setFormState(initialState)
+    navigate(`/categorylist/${categoryId}`)
   }
 
   return (

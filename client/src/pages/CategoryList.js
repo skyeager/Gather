@@ -3,6 +3,7 @@ import { GetCategoryList } from '../services/CategoryServices'
 import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 import CreateEvent from './CreateEvent'
+import { Link } from 'react-router-dom'
 
 const CategoryList = ({
   user,
@@ -20,7 +21,6 @@ const CategoryList = ({
     const handleCategoryList = async () => {
       const data = await GetCategoryList(id)
       setCategoryList(data)
-      console.log(data)
     }
     handleCategoryList()
   }, [])
@@ -40,8 +40,6 @@ const CategoryList = ({
           <h1>{catEvent.name}</h1>
           <h4>{catEvent.description}</h4>
           <h2>{catEvent.date}</h2>
-          {/* <h2>{catEvent.categoryId}</h2> */}
-
           {/* <h4>People Attending: {catEvent.attending.length}</h4> */}
           <div>
             <button onClick={() => navigate(`/event/update/${id}/${index}`)}>
@@ -54,14 +52,15 @@ const CategoryList = ({
           </div>
         </div>
       ))}
-      <CreateEvent
+      <Link to="/create/event">Create an Event</Link>
+      {/* <CreateEvent
         setFormState={setFormState}
         formState={formState}
         initialState={initialState}
         user={user}
         categoryList={categoryList}
         setCategoryList={setCategoryList}
-      />
+      /> */}
     </div>
   )
 }
