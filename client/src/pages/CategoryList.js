@@ -4,7 +4,14 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 import CreateEvent from './CreateEvent'
 
-const CategoryList = ({ user, categoryList, setCategoryList }) => {
+const CategoryList = ({
+  user,
+  categoryList,
+  setCategoryList,
+  formState,
+  setFormState,
+  initialState
+}) => {
   let navigate = useNavigate()
 
   let { id } = useParams()
@@ -30,7 +37,9 @@ const CategoryList = ({ user, categoryList, setCategoryList }) => {
           <h1>{catEvent.name}</h1>
           <h4>{catEvent.description}</h4>
           <h2>{catEvent.date}</h2>
-          <h4>People Attending: {catEvent.attending.length}</h4>
+          {/* <h2>{catEvent.categoryId}</h2> */}
+
+          {/* <h4>People Attending: {catEvent.attending.length}</h4> */}
           <div>
             <button onClick={() => navigate(`/event/update/${id}/${index}`)}>
               Update
@@ -39,7 +48,12 @@ const CategoryList = ({ user, categoryList, setCategoryList }) => {
           </div>
         </div>
       ))}
-      <CreateEvent />
+      <CreateEvent
+        setFormState={setFormState}
+        formState={formState}
+        initialState={initialState}
+        user={user}
+      />
     </div>
   )
 }

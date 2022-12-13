@@ -58,6 +58,9 @@ const App = () => {
                 user={user}
                 categoryList={categoryList}
                 setCategoryList={setCategoryList}
+                formState={formState}
+                setFormState={setFormState}
+                initialState={initialState}
               />
             }
           />
