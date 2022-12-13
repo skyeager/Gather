@@ -61,7 +61,7 @@ const App = () => {
               />
             }
           />
-          {/* <Route
+          <Route
             path="/create/event"
             element={
               <CreateEvent
@@ -69,11 +69,12 @@ const App = () => {
                 formState={formState}
                 setFormState={setFormState}
                 initialState={initialState}
+                // categories={categories}
               />
             }
-          /> */}
+          />
           <Route
-            path="/update/event/:id/:index"
+            path="/event/update/:id/:index"
             element={
               <UpdateEvent
                 user={user}

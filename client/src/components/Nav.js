@@ -11,6 +11,7 @@ const Nav = ({ user, handleLogOut }) => {
           <Link onClick={handleLogOut} to="/">
             Sign Out
           </Link>
+          <h1>Welcome {user.email}</h1>
         </nav>
       </div>
     )

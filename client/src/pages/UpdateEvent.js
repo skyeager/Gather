@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 
@@ -11,15 +11,17 @@ const UpdateEvent = ({
   setCategoryList
 }) => {
   let { id, index } = useParams()
+  let eventId = formState.event_id
+
   let navigate = useNavigate()
 
   useEffect(() => {
     let selected = {
-      event_id: id,
+      event_id: categoryList[index].id,
       name: categoryList[index].name,
       description: categoryList[index].description,
       date: categoryList[index].date,
-      category_id: categoryList[index].category_id
+      category_id: categoryList[index].categoryId
     }
     setFormState(selected)
   }, [])
@@ -36,7 +38,7 @@ const UpdateEvent = ({
     const eventAdded = {
       ...formState
     }
-    await Client.put(`/event/update/${id}`, eventAdded)
+    await Client.put(`/event/update/${eventId}`, eventAdded)
     setFormState(initialState)
 
     navigate(`/categorylist/${id}`)

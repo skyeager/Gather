@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { GetCategoryList } from '../services/CategoryServices'
 import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
+import CreateEvent from './CreateEvent'
 
-const CategoryList = ({ use, categoryList, setCategoryList }) => {
+const CategoryList = ({ user, categoryList, setCategoryList }) => {
   let navigate = useNavigate()
 
   let { id } = useParams()
@@ -31,15 +32,14 @@ const CategoryList = ({ use, categoryList, setCategoryList }) => {
           <h2>{catEvent.date}</h2>
           <h4>People Attending: {catEvent.attending.length}</h4>
           <div>
-            return (user ? (
-            <button onClick={() => navigate(`/update/event/${id}/${index}`)}>
+            <button onClick={() => navigate(`/event/update/${id}/${index}`)}>
               Update
             </button>
             <button onClick={deleteEvent}> Delete </button>
-            ):() )
           </div>
         </div>
       ))}
+      <CreateEvent />
     </div>
   )
 }
