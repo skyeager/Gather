@@ -24,9 +24,9 @@ const CreateEvent = ({ user, initialState, formState, setFormState }) => {
 
   return (
     <div className="create-event-form">
-      <h1>Post an Event</h1>
+      <h1>Create an Event</h1>
       {/* add something to input event category into this h1 (i.e. post a music event!) */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="create-event-form">
         <label htmlFor="name">Name of Event: </label>
         <input
           className="form-box"
@@ -42,7 +42,7 @@ const CreateEvent = ({ user, initialState, formState, setFormState }) => {
           type="text"
           id="description"
           cols="30"
-          rows="10"
+          rows="20"
           // value={formState.description}
         ></textarea>
         <label htmlFor="date">Date: </label>
