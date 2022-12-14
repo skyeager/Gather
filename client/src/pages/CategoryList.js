@@ -55,24 +55,15 @@ const CategoryList = ({
               {' '}
               Delete{' '}
             </button>
-            <button
+            {/* <button
               onClick={() => <MyList catEvent={catEvent} />}
               className="event-button"
             >
               Add to My List
-            </button>
+            </button> */}
           </div>
         ))}
       </div>
-
-      {/* <CreateEvent
-        setFormState={setFormState}
-        formState={formState}
-        initialState={initialState}
-        user={user}
-        categoryList={categoryList}
-        setCategoryList={setCategoryList}
-      /> */}
     </div>
   )
 }

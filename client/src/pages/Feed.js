@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { GetCategories } from '../services/CategoryServices'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Feed = ({ user }) => {
   const [categories, setCategories] = useState([])
