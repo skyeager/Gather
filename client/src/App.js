@@ -10,7 +10,6 @@ import Feed from './pages/Feed'
 import CategoryList from './pages/CategoryList'
 import CreateEvent from './pages/CreateEvent'
 import UpdateEvent from './pages/UpdateEvent'
-import MyList from './pages/MyList'
 
 const App = () => {
   const [user, setUser] = useState(null)

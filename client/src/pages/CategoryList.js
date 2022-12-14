@@ -2,8 +2,6 @@ import { useEffect } from 'react'
 import { GetCategoryList } from '../services/CategoryServices'
 import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
-import CreateEvent from './CreateEvent'
-import { Link } from 'react-router-dom'
 import MyList from './MyList'
 
 const CategoryList = ({

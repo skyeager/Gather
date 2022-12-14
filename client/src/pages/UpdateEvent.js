@@ -1,14 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import Client from '../services/api'
 
 const UpdateEvent = ({
-  user,
   initialState,
   formState,
   setFormState,
-  categoryList,
-  setCategoryList
+  categoryList
 }) => {
   let { id, index } = useParams()
   let eventId = formState.event_id
@@ -81,7 +79,6 @@ const UpdateEvent = ({
           id="category_id"
         >
           <option>Event Category</option>
-          {/* will hopefully not need this drop down, will automatically go! */}
           <option value={1}>Movement</option>
           <option value={2}>Music</option>
           <option value={3}>Food</option>

@@ -1,14 +1,5 @@
 const { Post } = require('../models')
 
-// const GetPosts = async (req, res) => {
-//   try {
-//     const posts = await Post.findAll()
-//     res.send(posts)
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
 const CreatePost = async (req, res) => {
   try {
     const post = await Post.create({ ...req.body })
@@ -40,7 +31,6 @@ const DeletePost = async (req, res) => {
 }
 
 module.exports = {
-  // GetPosts,
   CreatePost,
   UpdatePost,
   DeletePost
