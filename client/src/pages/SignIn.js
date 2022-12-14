@@ -34,6 +34,7 @@ const SignIn = ({ setUser }) => {
               placeholder="example@example.com"
               value={formValues.email}
               required
+              className="formbox"
             />
           </div>
           <div className="input-wrapper">
@@ -44,6 +45,7 @@ const SignIn = ({ setUser }) => {
               name="password"
               value={formValues.password}
               required
+              className="formbox"
             />
           </div>
           <button disabled={!formValues.email || !formValues.password}>

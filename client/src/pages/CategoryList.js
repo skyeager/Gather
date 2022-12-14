@@ -35,27 +35,38 @@ const CategoryList = ({
   }
 
   return (
-    <div className="category-list">
-      <MyList />
-      <Link to="/create/event">Create an Event</Link>
-      {categoryList?.map((catEvent, index) => (
-        <div className="category-card" key={catEvent.id}>
-          <h1>{catEvent.name}</h1>
-          <h4>{catEvent.description}</h4>
-          <h2>{catEvent.date}</h2>
-          {/* <h4>People Attending: {catEvent.attending.length}</h4> */}
-          <button onClick={() => navigate(`/event/update/${id}/${index}`)}>
-            Update
-          </button>
-          <button onClick={() => deleteEvent(catEvent.id, index)}>
-            {' '}
-            Delete{' '}
-          </button>
-          <button onClick={() => <MyList catEvent={catEvent} />}>
-            Add to My List
-          </button>
-        </div>
-      ))}
+    <div className="category-list-background">
+      {/* <MyList /> */}
+      <div className="category-list">
+        {categoryList?.map((catEvent, index) => (
+          <div className="category-card" key={catEvent.id}>
+            <h1>{catEvent.name}</h1>
+            <h4>{catEvent.description}</h4>
+            <h2>{catEvent.date}</h2>
+            {/* <h4>People Attending: {catEvent.attending.length}</h4> */}
+            <button
+              onClick={() => navigate(`/event/update/${id}/${index}`)}
+              className="event-button"
+            >
+              Update
+            </button>
+            <button
+              onClick={() => deleteEvent(catEvent.id, index)}
+              className="event-button"
+            >
+              {' '}
+              Delete{' '}
+            </button>
+            <button
+              onClick={() => <MyList catEvent={catEvent} />}
+              className="event-button"
+            >
+              Add to My List
+            </button>
+          </div>
+        ))}
+      </div>
+
       {/* <CreateEvent
         setFormState={setFormState}
         formState={formState}

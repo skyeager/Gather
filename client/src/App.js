@@ -45,56 +45,56 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav user={user} handleLogOut={handleLogOut} />
-      <MyList user={user} />
-
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn setUser={setUser} />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/feed" element={<Feed user={user} />} />
-          <Route
-            path="/categorylist/:id"
-            element={
-              <CategoryList
-                user={user}
-                categoryList={categoryList}
-                setCategoryList={setCategoryList}
-                formState={formState}
-                setFormState={setFormState}
-                initialState={initialState}
-              />
-            }
-          />
-          <Route
-            path="/create/event"
-            element={
-              <CreateEvent
-                user={user}
-                formState={formState}
-                setFormState={setFormState}
-                initialState={initialState}
-                categoryList={categoryList}
-                setCategoryList={setCategoryList}
-              />
-            }
-          />
-          <Route
-            path="/event/update/:id/:index"
-            element={
-              <UpdateEvent
-                user={user}
-                formState={formState}
-                setFormState={setFormState}
-                initialState={initialState}
-                categoryList={categoryList}
-                setCategoryList={setCategoryList}
-              />
-            }
-          />
-        </Routes>
-      </main>
+      <div>
+        <Nav user={user} handleLogOut={handleLogOut} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signin" element={<SignIn setUser={setUser} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/feed" element={<Feed user={user} />} />
+            <Route
+              path="/categorylist/:id"
+              element={
+                <CategoryList
+                  user={user}
+                  categoryList={categoryList}
+                  setCategoryList={setCategoryList}
+                  formState={formState}
+                  setFormState={setFormState}
+                  initialState={initialState}
+                />
+              }
+            />
+            <Route
+              path="/create/event"
+              element={
+                <CreateEvent
+                  user={user}
+                  formState={formState}
+                  setFormState={setFormState}
+                  initialState={initialState}
+                  categoryList={categoryList}
+                  setCategoryList={setCategoryList}
+                />
+              }
+            />
+            <Route
+              path="/event/update/:id/:index"
+              element={
+                <UpdateEvent
+                  user={user}
+                  formState={formState}
+                  setFormState={setFormState}
+                  initialState={initialState}
+                  categoryList={categoryList}
+                  setCategoryList={setCategoryList}
+                />
+              }
+            />
+          </Routes>
+        </main>
+      </div>
     </div>
   )
 }

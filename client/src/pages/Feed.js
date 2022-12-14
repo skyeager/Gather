@@ -18,20 +18,23 @@ const Feed = ({ user }) => {
 
   return user ? (
     <div className="feed">
-      <MyList user={user} />
-      <Link to="/create/event">Create an Event</Link>
-      {categories.map((category) => (
-        <div className="category-card" key={category.id}>
-          <h1>{category.name}</h1>
-          <h4>{category.description}</h4>
-          <button
-            className="events-button"
-            onClick={() => navigate(`/categorylist/${category.id}`)}
-          >
-            Events
-          </button>
+      <div>
+        {/* <MyList user={user} /> */}
+        <div className="feedlist">
+          {categories.map((category) => (
+            <div className="category-card" key={category.id}>
+              <h1>{category.name}</h1>
+              <h4>{category.description}</h4>
+              <button
+                className="events-button"
+                onClick={() => navigate(`/categorylist/${category.id}`)}
+              >
+                Events
+              </button>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   ) : (
     <div className="protected">

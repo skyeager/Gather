@@ -1,16 +1,15 @@
 import { useNavigate } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const Home = () => {
   let navigate = useNavigate()
 
   return (
     <div className="home-container col">
-      <h4>Welcome!</h4>
-
       <section className="welcome-signin">
-        <button onClick={() => navigate('/signin')}>
-          Click Here To Get Started
-        </button>
+        {/* <button onClick={() => navigate('/signin')}>
+          Click Here To Register
+        </button> */}
       </section>
     </div>
   )

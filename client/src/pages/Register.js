@@ -41,6 +41,7 @@ const Register = () => {
               placeholder="Jane Smith"
               value={formValues.name}
               required
+              className="formbox"
             />
           </div>
           <div className="input-wrapper">
@@ -52,6 +53,7 @@ const Register = () => {
               placeholder="example@example.com"
               value={formValues.email}
               required
+              className="formbox"
             />
           </div>
 
@@ -63,6 +65,7 @@ const Register = () => {
               name="password"
               value={formValues.password}
               required
+              className="formbox"
             />
           </div>
           <div className="input-wrapper">
@@ -73,6 +76,7 @@ const Register = () => {
               name="confirmPassword"
               value={formValues.confirmPassword}
               required
+              className="formbox"
             />
           </div>
           <button
@@ -82,7 +86,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Register
           </button>
         </form>
       </div>

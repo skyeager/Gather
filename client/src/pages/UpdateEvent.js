@@ -46,8 +46,8 @@ const UpdateEvent = ({
 
   return (
     <div>
-      <h1>Update an Event</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className="update-event-title">Update an Event</h1>
+      <form onSubmit={handleSubmit} className="update-event-form">
         <label htmlFor="name">Event: </label>
         <input
           className="form-box"
@@ -58,7 +58,7 @@ const UpdateEvent = ({
         />
         <label htmlFor="description">Description: </label>
         <textarea
-          className="form-box"
+          className="form-box-description"
           onChange={handleChange}
           type="text"
           id="description"

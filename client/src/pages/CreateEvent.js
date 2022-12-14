@@ -36,7 +36,7 @@ const CreateEvent = ({
 
   return (
     <div className="create-event-form">
-      <h1>Create an Event</h1>
+      <h1 className="create-event-title">Create an Event</h1>
       <form onSubmit={handleSubmit} className="create-event-form">
         <label htmlFor="name">Name of Event: </label>
         <input
@@ -48,11 +48,11 @@ const CreateEvent = ({
         />
         <label htmlFor="description">Description: </label>
         <textarea
-          className="form-box"
+          className="form-box-description"
           onChange={handleChange}
           type="text"
           id="description"
-          cols="30"
+          cols="40"
           rows="20"
           value={formState.description}
         ></textarea>
