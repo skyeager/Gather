@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { GetCategories } from '../services/CategoryServices'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import MyList from './MyList'
 
 const Feed = ({ user }) => {
   const [categories, setCategories] = useState([])
@@ -16,7 +17,9 @@ const Feed = ({ user }) => {
   }, [])
 
   return user ? (
-    <div className="grid-col-4">
+    <div className="feed">
+      <MyList user={user} />
+      <Link to="/create/event">Create an Event</Link>
       {categories.map((category) => (
         <div className="category-card" key={category.id}>
           <h1>{category.name}</h1>

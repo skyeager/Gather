@@ -10,6 +10,7 @@ import Feed from './pages/Feed'
 import CategoryList from './pages/CategoryList'
 import CreateEvent from './pages/CreateEvent'
 import UpdateEvent from './pages/UpdateEvent'
+import MyList from './pages/MyList'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -45,6 +46,8 @@ const App = () => {
   return (
     <div className="App">
       <Nav user={user} handleLogOut={handleLogOut} />
+      <MyList user={user} />
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

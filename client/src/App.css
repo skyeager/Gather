@@ -24,7 +24,7 @@
   color: #61dafb;
 }
 
-.grid-col-4{
+.feed{
   display: flex;
   background-color: #c2dfe3;
 }
@@ -84,6 +84,14 @@
 #description{
   height: 150px;
 }
+
+.App {
+  background-image: url(david-dvoracek-3kBIZZluhNc-unsplash.jpg);
+  background-size: cover;
+}
+
+/* .feed .create-event-form .category-list */
+
 
 /* .index-body{
   background-image: ("david-dvoracek-3kBIZZluhNc-unsplash.jpg") ;
