@@ -25,5 +25,3 @@ app.use('/user', UserRouter)
 app.use('/posts', PostRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
-
-// "build": "npm install && npx sequelize-cli db:migrate"

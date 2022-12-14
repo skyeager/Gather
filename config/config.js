@@ -19,4 +19,3 @@ module.exports = {
     }
   }
 }
-// should line 12 say DATABASE_URL instead??
