@@ -12,11 +12,11 @@
 
 #### [GitHub](https://github.com/skyeager/Gather)
 
-#### [Heroku]()
+#### [Heroku](https://gather-vermont.herokuapp.com/)
 
 ### **_*Description*_**
 
-#### Gather is a full-stack application that serves to connect communities through local events. This web application provides information on local events taking place in your town. Upon creating an account through user authentication, Gather provides categories of events taking place in the local area. By clicking into specific categories, users are provided with a list of events in that category. Further, users are provided a detailed event description and event date. Users can also create an event and later update or delete an event they've created. Lastly, Gather users are able to save events to their personal list of events. Gather implements front-end and back-end programming technologies to provide community members with listings of local events, allow users to save events to their list, and the ability to create, update, or delete their listings. 
+#### Gather is a full-stack application that serves to connect communities through local events. This web application provides information on local events taking place in your town. Upon creating an account through user authentication, Gather provides categories of events taking place in the local area. By clicking into specific categories, users are provided with a list of events in that category. Further, users are provided a detailed event description and event date. Users can also create an event and later update or delete an event they've created. Lastly, Gather users are able to save events to their personal list of events. Gather implements front-end and back-end programming technologies to provide community members with listings of local events, allow users to save events to their list, and the ability to create, update, or delete their listings.
 
 ---
 
@@ -44,7 +44,7 @@
 
 ### **_Getting Started_**
 
-#### Upon entering Gather, visitors will be prompted to login or create a user account. If they do not have a user account, they will create one through user authentication and then will be redirected to the login page. Upon logging in, users will be directed to the homepage, which displays the user's personal list of events and also a category of local events. Users can then click into a category to see a list of events specific to that category. This list of categories will describe each event and their event date. It will also allow users to add a specific event to their personal list of events. From this list, users can create a new event. They can also update or delete events they previously created. 
+#### Upon entering Gather, visitors will be prompted to login or create a user account. If they do not have a user account, they will create one through user authentication and then will be redirected to the login page. Upon logging in, users will be directed to the homepage, which displays the user's personal list of events and also a category of local events. Users can then click into a category to see a list of events specific to that category. This list of categories will describe each event and their event date. It will also allow users to add a specific event to their personal list of events. From this list, users can create a new event. They can also update or delete events they previously created.
 
 ---
 
