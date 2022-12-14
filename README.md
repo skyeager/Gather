@@ -50,13 +50,13 @@
 
 ### **Image Board**
 
-<figcaption> Gather's Event Categories Page</figcaption>
+<figcaption> Gather's Events Page</figcaption>
 
-![Event Categories]()
+![Event Categories](https://user-images.githubusercontent.com/95553482/207713384-34f37ff2-4e95-4365-9955-c206ffb6a34b.png)
 
 <figcaption> Gather's Create Event Page</figcaption>
 
-![Create Event]()
+![Create Event](https://user-images.githubusercontent.com/95553482/207713674-20bac39c-38a6-4af4-a696-60d37ec77205.png)
 
 <figcaption>Trello Board</figcaption>
 
