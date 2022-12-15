@@ -83,8 +83,4 @@
 
 ### **_Credits_**
 
-#### Gather Inspiration Image: [Seven Days](https://www.sevendaysvt.com/vermont/EventSearch?v=d)
-
-#### PERN Image Credit: [GeeksforGeeks](https://www.geeksforgeeks.org/what-is-pern-stack/)
-
-#### HTML/JS/CSS image credit: [Medium](https://medium.com/level-up-web/amazingly-useful-html-css-and-javascript-tools-and-libraries-d73b10fbae29)
+#### Gather's Background Image Credits: [David Dvořáček on Unsplash](https://unsplash.com/)
