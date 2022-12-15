@@ -9,11 +9,6 @@
 }
 
 
-
-.col{
-  font-family: 'Roboto';
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -139,6 +134,18 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.formbox{
+  margin: 10px;
+}
+
+  .col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Roboto';
   align-items: center;
 }
 
