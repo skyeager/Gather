@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(`${__dirname}/client/build`))
 
-app.get('/', (req, res) => res.json({ msg: `Server Works!` }))
+app.get('/', (req, res) => res.json({ msg: `Server Works` }))
 app.use('/auth', AuthRouter)
 app.use('/category', CategoryRouter)
 app.use('/event', EventRouter)
